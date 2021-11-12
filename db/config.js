@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const dbUrl = process.env.DB_URL_DEV;
+const dbUrl = process.env.DB_URL_PROD;
 const options = {
   useUnifiedTopology: true,
   useNewUrlParser: true,
