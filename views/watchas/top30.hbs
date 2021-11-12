@@ -20,10 +20,12 @@
             </p>
           </div>
           <div class="movie_social">
+            {{#if username}}
             <ul>
                 <li><button class="watchedButton transition" value="{{this.imdbID}}">WATCHED</button></li>
                 <li><button class="wantButton transition" value="{{this.imdbID}}">WANT</button></li>
             </ul>
+            {{/if}}
           </div>
         </div>
         <div class="blurBack">
