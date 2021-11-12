@@ -1,4 +1,4 @@
-/* basic profile styles */
+/* ------ basic profile styles ------ */
 
 .profileMain {
   background-color: #192334;
@@ -10,6 +10,7 @@
   display: flex;
   position: relative;
 }
+
 .profileSection {
   border-bottom: 1px solid rgba(255,255,255,.25);
 }
@@ -24,12 +25,14 @@
   margin-top: 6%;
   display: flex;
 }
+
 #firstName, #lastName {
   font-weight: 500;
   font-size: 2em;
   letter-spacing: .1rem;
 }
-/* edit styles */
+
+/*---- edit name styles -----*/
 
 #pencilButton {
   border: none;
@@ -56,23 +59,7 @@
   margin-right: 10px;
 }
 
-/* input {
-  font-size: 2em;
-  outline: none;
-  padding: 5px 10px;
-  margin-bottom: 5px;
-  color: #FFF;
-  background-color: grey;
-  border-color: transparent;
-  border-radius: 5%;
-}
-
-#editButton {
-  width: 50%
-} */
-
-
-/* movie counts styles */
+/* ----- movie counts styles --------*/
 
 #movieCounts {
   display: flex;
@@ -119,7 +106,7 @@
   transform-origin: bottom left;
 }
 
-/* movie images section */
+/* ------- movie images section -------- */
 
 .movieList {
   background-color: #181b26;
@@ -127,6 +114,11 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 35px 0;
+}
+
+.movieList h1 {
+  color: #FFF;
+  text-align: center;
 }
 
 .movieList a {

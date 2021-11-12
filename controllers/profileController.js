@@ -76,9 +76,11 @@ exports.renderWatchedProfile = async (req, res) => {
     const user = await User.findById(userId).exec();
     let watchedMoviesCount = user.watched.length;
     let wantedMoviesCount = user.want.length;
-
+    
+    let noWatchedMovies;
+    if (watchedMoviesCount === 0) noWatchedMovies = true;
+    
     let watchedMovies = [];
-
     //fetching movie database API
     for (let i = 0; i < watchedMoviesCount; i++) {
       let movies = await fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?r=json&i=${user.watched[i]}`, {
@@ -91,7 +93,7 @@ exports.renderWatchedProfile = async (req, res) => {
       const data = await movies.json();
       watchedMovies.push(data);
     }
-    res.render('profile/profile', { user, Watched: true, watchedMoviesCount, wantedMoviesCount, watchedMovies });
+    res.render('profile/profile', { user, Watched: true, watchedMoviesCount, wantedMoviesCount, watchedMovies, noWatchedMovies });
   } catch (err) {
     console.log(err);
   }
@@ -105,8 +107,10 @@ exports.renderWantProfile = async (req, res) => {
     let watchedMoviesCount = user.watched.length;
     let wantedMoviesCount = user.want.length;
 
+    let noWantedMovies;
+    if (wantedMoviesCount === 0) noWantedMovies = true;
+    
     let wantedMovies = [];
-
     //fetching movie database API
     for (let i = 0; i < wantedMoviesCount; i++) {
       let movies = await fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?r=json&i=${user.want[i]}`, {
@@ -119,7 +123,7 @@ exports.renderWantProfile = async (req, res) => {
       const data = await movies.json();
       wantedMovies.push(data);
     }
-    res.render('profile/profile', { user, Want: true, watchedMoviesCount, wantedMoviesCount, wantedMovies });
+    res.render('profile/profile', { user, Want: true, watchedMoviesCount, wantedMoviesCount, wantedMovies, noWantedMovies });
   } catch (err) {
     console.log(err);
   }

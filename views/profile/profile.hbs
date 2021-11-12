@@ -23,6 +23,20 @@
       {{/if}}
     </div>
   </section>
+  {{#if noWatchedMovies}}
+    <section class="wrapper movieList">
+      <h1>You haven't seen anything yet! <br> 
+      Search watchas<a href="/search/byTitle">here</a> 
+      </h1>
+    </section>
+  {{/if}}
+  {{#if noWantedMovies}}
+    <section class="wrapper movieList">
+      <h1>You haven't added anything to your list yet! <br> 
+      Search watchas<a href="/search/byTitle">here</a> 
+      </h1>
+    </section>
+  {{/if}}
   {{#if Watched}}
     <section class="wrapper movieList">
       {{#each watchedMovies}}
