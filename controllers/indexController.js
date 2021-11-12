@@ -1,11 +1,12 @@
 const fetch = require('node-fetch');
+require('dotenv').config();
 
 exports.renderMainPage = async (req, res) => {
   const randomMovies = await fetch("https://imdb8.p.rapidapi.com/title/get-most-popular-movies?homeCountry=US&purchaseCountry=US&currentCountry=US", {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "imdb8.p.rapidapi.com",
-      "x-rapidapi-key": "bb1aa16154msh80fe6ed1267bea0p13e516jsn12054468d781"
+      "x-rapidapi-key": process.env.RAPID_KEY
     }
   })
   const data = await randomMovies.json();
@@ -17,7 +18,7 @@ exports.renderMainPage = async (req, res) => {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
-        "x-rapidapi-key": "bb1aa16154msh80fe6ed1267bea0p13e516jsn12054468d781"
+        "x-rapidapi-key": process.env.RAPID_KEY
       }
     })
     const data = await movies.json();

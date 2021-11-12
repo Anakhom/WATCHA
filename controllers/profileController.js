@@ -1,5 +1,6 @@
 const User = require('../db/models/user');
 const fetch = require('node-fetch');
+require('dotenv').config();
 
 exports.redirectProfile = async (req, res) => {
   let userId = req.params.userId;
@@ -84,7 +85,7 @@ exports.renderWatchedProfile = async (req, res) => {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
-        "x-rapidapi-key": "bb1aa16154msh80fe6ed1267bea0p13e516jsn12054468d781"
+        "x-rapidapi-key": process.env.RAPID_KEY
       }
     })
       const data = await movies.json();
@@ -112,7 +113,7 @@ exports.renderWantProfile = async (req, res) => {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
-        "x-rapidapi-key": "bb1aa16154msh80fe6ed1267bea0p13e516jsn12054468d781"
+        "x-rapidapi-key": process.env.RAPID_KEY
       }
     })
       const data = await movies.json();
