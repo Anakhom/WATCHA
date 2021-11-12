@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/mainPage.css">
+  <link rel="stylesheet" href="/css/movieCards.css">
+  <link rel="stylesheet" href="/css/movieButtons.css">
+  <link rel="stylesheet" href="/css/watcha.css">
+  <link rel="stylesheet" href="/css/searchPage.css">
+  <link rel="stylesheet" href="/css/profile.css">
+  {{!-- google fonts --}}
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300&family=Montserrat:wght@300;400&family=Poiret+One&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  {{!-- anime.js --}}
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  {{!-- letterize.js --}}
+  <script defer src="https://cdn.jsdelivr.net/npm/letterizejs/lib/letterize.min.js"></script>
+  {{#if Main}}
+    <script defer src='/js/anime.js'></script>
+  {{/if}}
+  <script defer src='/js/movieButtons.js'></script>
+  <script defer src='/js/login.js'></script>
+  <script defer src='/js/register.js'></script>
+  <script defer src='/js/profiler.js'></script>
+  <script defer src='/js/search.js'></script>
+  <title>WATCHA</title>
+</head>
+<body>
+  <div class="navDiv">
+    <input type="hidden" id="hiddenInput" value="{{userId}}">
+    <nav>
+      <div class="wrapper navStyles">
+        <h1>
+          <a class="logo" href="/">WATCHA</a>
+        </h1>
+        <ul>
+        {{#if username}}
+          <li><a class="box foo">Hey there, {{username}}</a></li>
+          <li><a class="box foo" href="/profile/{{userId}}">My Shelf</a></li>
+          <li><a class="box foo" href="/auth/signout">Exit</a></li>
+          <div class="dropdown">
+            <button class="dropbtn">Watchas</button>
+            <div class="dropdown-content">
+              <a href="/mostPopular">25 Current Popular</a>
+              <a href="#">By Genre</a>
+              <a href="/search/byTitle">By Title</a>
+            </div>
+          </div>
+        {{else}}
+          <li><a class="box foo" id="show-register">Sign up</a></li>
+          <li><a class="box foo" id="show-login">Login</a></li>
+          {{!-- dropdown items --}}
+          <div class="dropdown">
+            <button class="dropbtn">Watchas</button>
+            <div class="dropdown-content">
+              <a href="/mostPopular">25 Current Popular</a>
+              <a href="#">By Genre</a>
+              <a href="/search/byTitle">By Title</a>
+            </div>
+          </div>
+          {{!-- login popup --}}
+          <div class="loginPopup">
+            <div class="close-btn">&times;</div>
+            <form class="form loginForm" method="POST" action="/auth/login">
+              <h2>Log in</h2>
+              <div class="form-element">
+                <label for="email">Login</label>
+                <input type="text" id="loginLogin" name="loginLogin" placeholder="Enter your username">
+              </div>
+              <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password">
+              </div>
+              <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+              </div>
+              <div class="form-element">
+                <button type="submit">Sign in</button>
+              </div>
+              <div class="form-element">
+                <a href="#">Forgot password?</a>
+              </div>
+            </form>
+          </div>
+          {{!-- register popup --}}
+          <div class="registerPopup">
+            <div class="close-btn">&times;</div>
+            <form class="form registerForm" method="POST" action="/auth/register">
+              <h2>Sign up to track your Watchas</h2>
+              <div class="form-element">
+                <label for="email">Login</label>
+                <input type="text" name="registerLogin" id="registerLogin" placeholder="Enter login" required pattern="[A-Za-z]\w+" minlength="4" title="Только латинские буквы, цифры и символ _">
+              </div>
+              <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" name="registerEmail" id="registerEmail" placeholder="Enter email">
+              </div>
+              <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" name="registerPassword" id="registerPassword" placeholder="Enter password">
+              </div>
+              <div class="form-element">
+                <button type="submit">Sign up!</button>
+              </div>
+            </form>
+          </div>
+        {{/if}}
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  {{{body}}}
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="l-footer">
+        <h1>WATCHA</h1>
+        <p>Track what you watch with us</p>
+      </div>
+      <ul class="r-footer">
+        <li>
+          <h2>Social</h2>
+          <ul class="box1">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </li>
+        <li class="features">
+          <h2>Information</h2>
+          <ul class="box1 h-box">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Customer Service</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2>Legal</h2>
+          <ul class="box1">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contract us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

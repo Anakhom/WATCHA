@@ -1,0 +1,40 @@
+<main class="profileMain">
+  <section class="wrapper profileSection">
+    <img class="avatar" src="https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?k=20&m=1223671392&s=612x612&w=0&h=lGpj2vWAI3WUT1JeJWm1PRoHT3V15_1pdcTn2szdwQ0=">
+    <div id="nameChanger">
+      <div class="userInfo">
+        <p id="firstName">{{user.firstName}}</p>
+        <p id="lastName">{{user.lastName}} </p>
+        <p id="login">@{{username}}</p>
+      </div>
+      {{#if username}}
+      <div class="changeButton">
+        <button id="pencilButton">&#x270E;</button>
+      </div>
+      {{/if}}
+    </div>
+    <div id="movieCounts">
+      {{#if Watched}}
+        <a class="activeCount" href="/profile/{{userId}}/watched">{{watchedMoviesCount}} <br> watched</a>
+        <a class="hover" href="/profile/{{userId}}/want">{{wantedMoviesCount}} <br> want</a>
+      {{else}}
+        <a class="hover" href="/profile/{{userId}}/watched">{{watchedMoviesCount}} <br> watched</a>
+        <a class="activeCount" href="/profile/{{userId}}/want">{{wantedMoviesCount}} <br> want</a>
+      {{/if}}
+    </div>
+  </section>
+  {{#if Watched}}
+    <section class="wrapper movieList">
+      {{#each watchedMovies}}
+      <a href="/watcha/{{this.imdbID}}"><img src="{{this.Poster}}" alt="{{this.Title}}"></a>
+      {{/each}}
+    </section>
+  {{/if}}
+  {{#if Want}}
+    <section class="wrapper movieList">
+      {{#each wantedMovies}}
+      <a href="/watcha/{{this.imdbID}}"><img src="{{this.Poster}}" alt="{{this.Title}}"></a>
+      {{/each}}
+    </section>
+  {{/if}}
+</main> 

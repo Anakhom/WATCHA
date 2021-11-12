@@ -1,0 +1,39 @@
+{
+  "name": "watcha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js --ignore sessions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anakhom/watcha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anakhom/watcha/issues"
+  },
+  "homepage": "https://github.com/Anakhom/watcha#readme",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.2",
+    "letterizejs": "^2.0.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.6",
+    "session-file-store": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

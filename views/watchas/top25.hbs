@@ -1,0 +1,35 @@
+<main class="top25Main">
+  <section class="wrapper top25">
+    <div class="centerText">
+      <h1>Top 25 New Watchas</h1>
+      <h2>Learn about new and trending watchas right here</h2>
+    </div>
+    {{#each imagesArr}}
+      <div class="movie_card" id="card">
+        <div class="info_section">
+          <div class="movie_header">
+            <img class="locandina" src="{{this.Poster}}"/>
+            <h1><a href="/watcha/{{this.imdbID}}">{{this.Title}}</a></h1>
+            <h4>{{this.Director}}</h4>
+            <span class="minutes">{{this.Year}}</span>
+            <p class="type">{{this.Genre}}</p>
+          </div>
+          <div class="movie_desc">
+            <p class="text">
+              {{this.Plot}} 
+            </p>
+          </div>
+          <div class="movie_social">
+            <ul>
+                <li><button class="watchedButton transition" value="{{this.imdbID}}">WATCHED</button></li>
+                <li><button class="wantButton transition" value="{{this.imdbID}}">WANT</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="blur_back bright_back">
+          <img class="card-image" src="{{this.Poster}}"/>
+        </div>
+      </div>
+    {{/each}}
+  </section>
+</main>

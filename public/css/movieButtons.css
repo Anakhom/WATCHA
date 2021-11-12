@@ -1,0 +1,53 @@
+.watchedButton, .wantButton {
+  background-color: transparent;
+  color: #FFF;
+  border: none;
+  position:relative;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 13px;
+  bottom: 15px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  -webkit-transition:0.5s;
+}
+
+.watchedButton:hover, .wantButton:hover {
+  border: 2px solid #FFF;
+}
+
+.watchedButton::before, .watchedButton::after,
+.wantButton::before, .wantButton::after {
+  width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  transition: 0.5s;
+}
+.transition::before {
+  border-bottom: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  -webkit-transform-origin: 0 100%;
+}
+
+.transition::after {
+  border-top: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  -webkit-transform-origin: 100% 0%;
+}
+
+.watchedButton:hover::after, .watchedButton:hover::before,
+.wantButton:hover::after, .wantButton:hover::before {
+  -webkit-transform: scale(1);
+}
+
+.activeButton {
+  background-color: #FFF;
+  color: black;
+}

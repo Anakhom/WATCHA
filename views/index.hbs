@@ -1,0 +1,69 @@
+<header>
+  <div class="animationDiv">
+      <div class="animate">
+        thriller•anime
+      </div>
+      <div class="animate">
+        •horror•sci-Fi•
+      </div>
+      <div class="animate">
+        drama•western
+      </div>
+      <div class="animate">
+        •documentary•
+      </div>
+      <div class="animate">
+        action•musical
+      </div>
+      <div class="animate">
+        •comedy•indie•
+      </div>
+      <div class="animate">
+        thriller•crime
+      </div>
+      <div class="animate">
+        romcom•silent
+      </div>
+      <div class="animate">
+        • psychedelic•
+      </div>
+      <div class="animate">
+        mockumentary
+      </div>
+      <div class="animate">
+        mystery•noir •
+      </div>
+      <div class="animate">
+        psychological
+      </div>
+    </div>
+</header>
+<main class="mainPage">
+  <section>
+    <div class="mainPageCenter">
+      <h1 class="ml12">Watcha watching?</h1>
+      <ul class="cards">
+      {{#each imagesArr}}
+        <li>
+          <a href="" class="card">
+            <img src="{{this.Poster}}" class="card__image" alt=""/>
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <div class="card__header-text">
+                  <h3 class="card__title">{{this.Title}}</h3>            
+                  <span class="card__status">{{this.Year}}</span>
+                </div>
+              </div>
+              <p class="card__description">{{this.Plot}}</p>
+            </div>
+          </a>      
+        </li>
+      {{/each}}
+      </ul>
+      <div class="mainPageText">
+        <p>Watcha lets you track watchas (our word for movies) you've seen and watchas you want to see. <br> A true heaven for movie lovers!</p>
+      </div>
+    </div>
+  </section>
+</main>
