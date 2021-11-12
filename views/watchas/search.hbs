@@ -1,28 +1,28 @@
 <main class="searchMain">
+    <h3>Welcome to our search section</h3>
+    <p class="searchDescription">You can search any watcha (even series) right here</p>
   <section class="wrapper searchSection">
     <form method="post" action="/search/byTitle" class="searchForm">
-    <input type="search" class="searchTerm" name="searchInput" required>
-    <i class="fa fa-search"></i>
-    <a href="javascript:void(0)" id="clear-btn">Clear</a>
-  </form>
-  {{!-- <form method="post" action="/search/byTitle">
-    <input type="text" name="searchInput" placeholder="Search by title!">
-    <button type="submit" name="searchButton">search</button>
-  </form> --}}
+      <input type="search" class="searchTerm" name="searchInput" required>
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+      <a href="javascript:void(0)" id="clearButton">Clear</a>
+    </form>
   </section>
   {{#if Found}}
+    <section class="wrapper">
     {{#each moviesInfo}}
-      <section class="wrapper">
-        <div class="movie_card" id="card">
-          <div class="info_section">
-            <div class="movie_header">
-              <img class="locandina" src="{{this.Poster}}"/>
+        <div class="movieCard" id="card">
+          <div class="infoSection">
+            <div class="movieHeader">
+              <img class="poster" src="{{this.Poster}}"/>
               <h1><a href="/watcha/{{this.imdbID}}">{{this.Title}}</a></h1>
               <h4>{{this.Director}}</h4>
               <span class="minutes">{{this.Year}}</span>
               <p class="type">{{this.Genre}}</p>
             </div>
-            <div class="movie_desc">
+            <div class="movieDescription">
               <p class="text">
                 {{this.Plot}} 
               </p>
@@ -34,11 +34,11 @@
               </ul>
             </div>
           </div>
-          <div class="blur_back bright_back">
-            <img class="card-image" src="{{this.Poster}}"/>
+          <div class="blurBack">
+            <img class="cardImage" src="{{this.Poster}}"/>
           </div>
         </div>
-      </section>
     {{/each}}
+    </section>
   {{/if}}
 </main>

@@ -7,7 +7,7 @@ exports.redirectProfile = async (req, res) => {
   res.redirect(`/profile/${userId}/watched`);
 }
 
-// add/remove movies to/from DB functions
+//----------add/remove movies to/from DB functions
 exports.addWatchedMovie = async (req, res) => {
   let userId = req.params.userId;
   let watchedMovieId = req.body.movieId;
@@ -68,7 +68,7 @@ exports.addWantedMovie = async (req, res) => {
   res.end();
 }
 
-//render movies functions
+//---------render movies functions
 exports.renderWatchedProfile = async (req, res) => {
   let userId = req.params.userId;
 
@@ -77,6 +77,7 @@ exports.renderWatchedProfile = async (req, res) => {
     let watchedMoviesCount = user.watched.length;
     let wantedMoviesCount = user.want.length;
     
+    //checking if the user hasn't added any movies
     let noWatchedMovies;
     if (watchedMoviesCount === 0) noWatchedMovies = true;
     
@@ -107,11 +108,12 @@ exports.renderWantProfile = async (req, res) => {
     let watchedMoviesCount = user.watched.length;
     let wantedMoviesCount = user.want.length;
 
+    //checking if the user hasn't added any movies
     let noWantedMovies;
     if (wantedMoviesCount === 0) noWantedMovies = true;
     
     let wantedMovies = [];
-    //fetching movie database API
+    //fetching  Movie Database API
     for (let i = 0; i < wantedMoviesCount; i++) {
       let movies = await fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?r=json&i=${user.want[i]}`, {
       "method": "GET",
@@ -129,7 +131,7 @@ exports.renderWantProfile = async (req, res) => {
   }
 };
 
-//edit profile function
+//-----------edit profile function
 exports.editProfile = async (req, res) => {
   let userId = req.params.userId;
 

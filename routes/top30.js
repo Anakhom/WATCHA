@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { renderTop25Movies } = require("../controllers/top25Controller");
+const { renderTop30Movies } = require("../controllers/top30Controller");
 
 router
   .route('/')
-  .get(renderTop25Movies);
+  .get(renderTop30Movies);
 
 module.exports = router;

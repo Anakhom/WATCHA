@@ -1,12 +1,12 @@
 //---------popup logic
-document.querySelector("#show-register")?.addEventListener("click", function() {
+document.querySelector("#showRegister")?.addEventListener("click", function() {
   //showing popup
   document.querySelector(".registerPopup").classList.add("active");
   //hiding the animation while user registers
   document.querySelector(".animationDiv").style.visibility = "hidden";
 });
 
-document.querySelector(".registerPopup .close-btn")?.addEventListener("click", function() {
+document.querySelector(".registerPopup .closeButton")?.addEventListener("click", function() {
   //hiding the popup
   document.querySelector(".registerPopup").classList.remove("active");
   //showing the animation again

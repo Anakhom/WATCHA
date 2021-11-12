@@ -1,12 +1,12 @@
 //---------popup logic
-document.querySelector("#show-login")?.addEventListener("click", function() {
+document.querySelector("#showLogin")?.addEventListener("click", function() {
   //opening the popup
   document.querySelector(".loginPopup").classList.add("active");
   //hidding the animation while user is loging in
   document.querySelector(".animationDiv").style.visibility = "hidden";
 });
 
-document.querySelector(".loginPopup .close-btn")?.addEventListener("click", function() {
+document.querySelector(".loginPopup .closeButton")?.addEventListener("click", function() {
   //closing the popup
   document.querySelector(".loginPopup").classList.remove("active");
   //showing the animation

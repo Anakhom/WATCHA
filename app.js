@@ -5,18 +5,13 @@ require('dotenv').config();
 
 const session = require('./middleware/createSession');
 const isUser = require('./middleware/isUser');
-const indexRouter = require('./routes/index');
-const watchaRouter = require('./routes/watcha')
-const top25MoviesRouter = require('./routes/top25');
-const searchRouter = require('./routes/search');
-
-// const singleMentorRouter = require('./routes/singleMentor.js');
-
-// const renderMentors = require('./routes/index');
 const authRouter = require('./routes/auth.js');
 const profileRouter = require('./routes/profile.js');
-// const tagRouter = require('./routes/tag.js');
-// const signoutRouter = require('./routes/signout.js');
+const indexRouter = require('./routes/index');
+const watchaRouter = require('./routes/watcha')
+const top30MoviesRouter = require('./routes/top30');
+const searchRouter = require('./routes/search');
+
 const dbConnect = require('./db/connect');
 
 dbConnect();
@@ -39,9 +34,8 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/profile', profileRouter);
 app.use('/watcha', watchaRouter);
-app.use('/mostPopular', top25MoviesRouter);
+app.use('/mostPopular', top30MoviesRouter);
 app.use('/search', searchRouter);
-// app.use('/signout', signoutRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);

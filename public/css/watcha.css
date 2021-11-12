@@ -1,7 +1,10 @@
+/* ---- single watcha styles------ */
+
+/* importing font awesome star icons */
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css); 
 
 .singleWatchaMain {
-  background: #192334;
+  background: #181b26;
 }
 
 a {
@@ -92,8 +95,6 @@ a {
 }
 
 .description {
-  bottom: 0px;
-  height: 200px;
   font-size: 16px;
   line-height: 26px;
   color: #FFF;
@@ -124,12 +125,11 @@ a {
 }
 
 .tag:hover {
-  background: 	#484848;
+  background: #484848;
 }
 
 .column2 {
   padding-left: 41px;
-  /* padding-top: 30px; */
   margin-left: 20px;
   width: 480px;
   float: left;
@@ -144,31 +144,17 @@ a {
   margin-top: 23px;
 }
 
-.avatars img {
-  cursor: pointer;
-}
+/*-------- star rating styles --------*/
 
-.avatars img:hover {
-  opacity: 0.6;
-}
-
-.avatars a:hover {
-  text-decoration: none;
-}
-
-fieldset, label {
-  margin: 0;
-  padding: 0;
-}
-
-/** star rating styles **/
 .rating {
   border: none;
   float: left;
 }
+
 .rating > input {
   display: none;
 }
+
 .rating > label:before {
   margin: 5px;
   margin-top: 0;
@@ -177,15 +163,18 @@ fieldset, label {
   display: inline-block;
   content: "\f005";
 }
+
 .rating > .half:before {
   content: "\f089";
   position: absolute;
 }
+
 .rating > label {
   color: #ddd;
   float: right;
 }
-/***** CSS Magic to Highlight Stars on Hover *****/
+
+/* highlighting stars on hover */
 .rating > input:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
 /* show gold star when clicked */
 /* hover current star */

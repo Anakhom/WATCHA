@@ -38,72 +38,72 @@
         </h1>
         <ul>
         {{#if username}}
-          <li><a class="box foo">Hey there, {{username}}</a></li>
-          <li><a class="box foo" href="/profile/{{userId}}">My Shelf</a></li>
-          <li><a class="box foo" href="/auth/signout">Exit</a></li>
+          <li><a class="greeting">Hey there, {{username}}</a></li>
+          <li><a class="box transition" href="/profile/{{userId}}">My Shelf</a></li>
+          <li><a class="box transition" href="/auth/signout">Exit</a></li>
           <div class="dropdown">
-            <button class="dropbtn">Watchas</button>
-            <div class="dropdown-content">
+            <button class="dropButton">Watchas</button>
+            <div class="dropdownContent">
               <a href="/mostPopular">25 Current Popular</a>
               <a href="#">By Genre</a>
               <a href="/search/byTitle">By Title</a>
             </div>
           </div>
         {{else}}
-          <li><a class="box foo" id="show-register">Sign up</a></li>
-          <li><a class="box foo" id="show-login">Login</a></li>
+          <li><a class="box transition" id="showRegister">Sign up</a></li>
+          <li><a class="box transition" id="showLogin">Login</a></li>
           {{!-- dropdown items --}}
           <div class="dropdown">
-            <button class="dropbtn">Watchas</button>
-            <div class="dropdown-content">
-              <a href="/mostPopular">25 Current Popular</a>
+            <button class="dropButton">Watchas</button>
+            <div class="dropdownContent">
+              <a href="/mostPopular">30 Current Popular</a>
               <a href="#">By Genre</a>
               <a href="/search/byTitle">By Title</a>
             </div>
           </div>
           {{!-- login popup --}}
           <div class="loginPopup">
-            <div class="close-btn">&times;</div>
+            <div class="closeButton">&times;</div>
             <form class="form loginForm" method="POST" action="/auth/login">
               <h2>Log in</h2>
-              <div class="form-element">
+              <div class="formElement">
                 <label for="email">Login</label>
                 <input type="text" id="loginLogin" name="loginLogin" placeholder="Enter your username">
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <label for="password">Password</label>
                 <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password">
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <input type="checkbox" id="remember-me">
                 <label for="remember-me">Remember me</label>
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <button type="submit">Sign in</button>
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <a href="#">Forgot password?</a>
               </div>
             </form>
           </div>
           {{!-- register popup --}}
           <div class="registerPopup">
-            <div class="close-btn">&times;</div>
+            <div class="closeButton">&times;</div>
             <form class="form registerForm" method="POST" action="/auth/register">
               <h2>Sign up to track your Watchas</h2>
-              <div class="form-element">
+              <div class="formElement">
                 <label for="email">Login</label>
                 <input type="text" name="registerLogin" id="registerLogin" placeholder="Enter login" required pattern="[A-Za-z]\w+" minlength="4" title="Только латинские буквы, цифры и символ _">
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <label for="email">Email</label>
                 <input type="text" name="registerEmail" id="registerEmail" placeholder="Enter email">
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <label for="password">Password</label>
                 <input type="password" name="registerPassword" id="registerPassword" placeholder="Enter password">
               </div>
-              <div class="form-element">
+              <div class="formElement">
                 <button type="submit">Sign up!</button>
               </div>
             </form>
@@ -118,11 +118,11 @@
 
   <footer class="footer">
     <div class="wrapper">
-      <div class="l-footer">
+      <div class="leftFooter">
         <h1>WATCHA</h1>
         <p>Track what you watch with us</p>
       </div>
-      <ul class="r-footer">
+      <ul class="rightFooter">
         <li>
           <h2>Social</h2>
           <ul class="box1">
@@ -133,12 +133,10 @@
         </li>
         <li class="features">
           <h2>Information</h2>
-          <ul class="box1 h-box">
+          <ul class="box1 hBox">
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Sales</a></li>
-            <li><a href="#">Tickets</a></li>
-            <li><a href="#">Certifications</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our API</a></li>
             <li><a href="#">Customer Service</a></li>
           </ul>
         </li>
@@ -147,7 +145,7 @@
           <ul class="box1">
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contract us</a></li>
+            <li><a href="#">Contact us</a></li>
           </ul>
         </li>
       </ul>

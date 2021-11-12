@@ -1,20 +1,20 @@
 <main class="top25Main">
   <section class="wrapper top25">
     <div class="centerText">
-      <h1>Top 25 New Watchas</h1>
+      <h1>Top 30 New Watchas</h1>
       <h2>Learn about new and trending watchas right here</h2>
     </div>
     {{#each imagesArr}}
-      <div class="movie_card" id="card">
-        <div class="info_section">
-          <div class="movie_header">
-            <img class="locandina" src="{{this.Poster}}"/>
+      <div class="movieCard" id="card">
+        <div class="infoSection">
+          <div class="movieHeader">
+            <img class="poster" src="{{this.Poster}}"/>
             <h1><a href="/watcha/{{this.imdbID}}">{{this.Title}}</a></h1>
             <h4>{{this.Director}}</h4>
-            <span class="minutes">{{this.Year}}</span>
+            <span class="year">{{this.Year}}</span>
             <p class="type">{{this.Genre}}</p>
           </div>
-          <div class="movie_desc">
+          <div class="movieDescription">
             <p class="text">
               {{this.Plot}} 
             </p>
@@ -26,8 +26,8 @@
             </ul>
           </div>
         </div>
-        <div class="blur_back bright_back">
-          <img class="card-image" src="{{this.Poster}}"/>
+        <div class="blurBack">
+          <img class="cardImage" src="{{this.Poster}}"/>
         </div>
       </div>
     {{/each}}

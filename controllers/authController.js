@@ -1,12 +1,12 @@
 const bcrypt = require('bcrypt');
 const User = require('../db/models/user');
 
-//function for failing the authorization
+//---------function for failing the authorization
 function failAuth(res) {
   return res.status(401).end();
 }
 
-//assigning only login and id to the session
+//----------assigning only login and id to the session
 function serializeUser(user) {
   return {
     id: user._id,
@@ -18,6 +18,7 @@ exports.createUserAndSession = async (req, res, next) => {
   const { login, password, email } = req.body;
 
   try {
+    //hashing user's password
     const hashedPassword = await bcrypt.hash(password, 10);
     
     const newUser = new User({ 
@@ -26,6 +27,7 @@ exports.createUserAndSession = async (req, res, next) => {
       email: email
     });
     await newUser.save();
+    //creating a session with only id and login
     req.session.user = serializeUser(newUser); 
   } catch (err) {
     console.log(err)
@@ -40,7 +42,9 @@ exports.checkUserAndCreateSession = async (req, res, next) => {
   try {
     const user = await User.findOne({ login: login }).exec();
 
+    //checking user's password with the hashed one
     await bcrypt.compare(password, user.password);
+    //creating a session with only id and login
     req.session.user = serializeUser(user);
     res.status(200).end();
   } catch (err) {

@@ -1,39 +1,57 @@
-/* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
-
 .searchMain {
   background-color: #181b26;
   color: #fff;
   height: 100%;
 }
 
+.searchMain h3, .searchDescription {
+  text-align: center;
+}
+
+.searchMain h3 {
+  margin-top: 4em;
+}
+
+.searchMain h3, .searchDescription {
+  margin-bottom: 1em;
+  letter-spacing: .1rem;
+}
+
 .searchSection {
   text-align: center;
   display: flex;
-  padding: 50px 70px;
-  /* height: 90vh; */
+  padding: 10px 70px 70px 70px;
 }
 
 /* ---- search bar styles -------- */
 
-.searchForm{
-  /* position: relative; */
+.searchForm {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   transition: all 1s;
   width: 50px;
   height: 50px;
-  background: white;
+  background: #FFF;
   box-sizing: border-box;
   border-radius: 25px;
-  border: 4px solid white;
+  border: 4px solid #FFF;
   padding: 5px;
   margin-left: 50%;
   margin-top: 5%;
 }
 
+.searchForm button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .searchTerm {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;;
@@ -47,7 +65,7 @@
   padding: 0 20px;
 }
 
-.fa{
+.fa {
   box-sizing: border-box;
   padding: 10px;
   width: 42.5px;
@@ -63,36 +81,35 @@
 }
 
 .searchForm:hover,
-.searchForm:valid{
+.searchForm:valid {
   width: 50%;
   cursor: pointer;
 }
 
 .searchForm:hover .searchTerm,
-.searchForm:valid .searchTerm{
+.searchForm:valid .searchTerm { 
   display: block;
 }
 
 .searchForm:hover .fa,
-.searchForm:valid .fa{
+.searchForm:valid .fa {
   background: #07051a;
   color: white;
 }
 
-
-#clear-btn {
-display: none;
-position: absolute;
-top: 70px;
-bottom:0;
-left: 0;
-right: 0;
-font-size: 20px;
-color: white;
-text-align: center; 
-width: 100%;
+#clearButton {
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center; 
+  width: 100%;
 }
 
-.searchForm:valid #clear-btn  {
+.searchForm:valid #clearButton {
   display: block;
 }

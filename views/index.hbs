@@ -45,17 +45,17 @@
       <ul class="cards">
       {{#each imagesArr}}
         <li>
-          <a href="" class="card">
-            <img src="{{this.Poster}}" class="card__image" alt=""/>
-            <div class="card__overlay">
-              <div class="card__header">
-                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                <div class="card__header-text">
-                  <h3 class="card__title">{{this.Title}}</h3>            
-                  <span class="card__status">{{this.Year}}</span>
+          <a href="/watcha/{{this.imdbID}}" class="card">
+            <img src="{{this.Poster}}" class="cardImageMain" alt=""/>
+            <div class="cardOverlay">
+              <div class="cardHeader">
+                <svg class="cardArc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <div class="cardHeaderText">
+                  <h3 class="cardTitle">{{this.Title}}</h3>            
+                  <span class="cardYear">{{this.Year}}</span>
                 </div>
               </div>
-              <p class="card__description">{{this.Plot}}</p>
+              <p class="cardPlot">{{this.Plot}}</p>
             </div>
           </a>      
         </li>
