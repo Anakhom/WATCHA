@@ -1,0 +1,20 @@
+header {
+  background: linear-gradient(to right, #006466, #4d194d);
+  color: #fff;
+  font-weight: 400;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  height: 90vh;
+  box-sizing: border-box;
+  letter-spacing: 6px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+span {
+  display: inline-block;
+}

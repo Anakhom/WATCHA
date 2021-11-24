@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const session = require('./middleware/createSession');
 const isUser = require('./middleware/isUser');
+
 const authRouter = require('./routes/auth.js');
 const profileRouter = require('./routes/profile.js');
 const indexRouter = require('./routes/index');
@@ -16,16 +17,19 @@ const dbConnect = require('./db/connect');
 
 dbConnect();
 const app = express();
-const PORT = process.env.PORT ?? 3000;
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+const PORT = process.env.PORT ?? 3200;
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  }),
+);
 
 app.use(session);
 app.use(isUser);
