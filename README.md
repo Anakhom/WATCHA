@@ -27,72 +27,52 @@ This app is for everyone who can't decide what to watch for way to long. Track a
 
 ## Let's explore WATCHA
 
-#### Although users can search watchas without being registered, they can only track them once thye are logged in.
+#### Although users can search watchas without being registered, they can only track them once they are logged in.
 
 ![Login](demo/login.gif)
+
+<br/>
+
 
 #### Welcome to user's shelf! All watched and wanted watchas are stored right here.
 
 ![Profile](demo/profile.gif)
 
+<br/>
+
+
 #### If no wathca comes to mind on a friday night, we got you. Top 30 Watchas page shows world's current hottest and most popular watchas and the list constantly updates. You can add any watcha to watched or wanted right here.
 
 ![Top 30](demo/top30.gif)
+
+<br/>
+
 
 #### There is a page for any watcha out there with more detailed info, of course.
 
 ![Single Watcha](demo/singleWatcha.gif)
 
-#### Of course, all boxes can be shown right on the map as well. 
-
-<img align="center" alt="delifood.com" src="/demo/map.png" />
-
-## Let's Talk Orders
-
-#### Once user is logged in, they can reserve a box and receive a success modal and an email with the detailes of the order.
-
-![User Purchase](demo/success.gif)
-
-#### User can navigate to their DeliFood minimal profile where they can filter all, active or non-active orders, as well as change their user info.
-
-<img align="center" alt="delifood.com" src="/demo/userProfile.png" />
-
-#### Orders contain all the neccessary info, such as the restaurant's location and contact number, unique code, status, and the option to cancel the order.
-
-<img align="center" alt="delifood.com" src="/demo/orders.png" />
-
-#### Now it is time to go and pick up the deliciousness!
-
-## Let's Talk Restaurants' CRM
-
-#### Welcome to restaurant's minimal (we like minimal design here) profile, which can be, of course, updated.
-
-<img align="center" alt="delifood.com" src="/demo/RestaurantProfile.png" />
-
-#### Restaurant can view active, picked up, or expired boxes. It can see how many boxes were reserved and delete any box at any time (however, reserved boxes cannot be deleted!)
-
-![CRM Boxes](demo/RestBoxes.gif)
-
-#### Restaurant can (and should 😉) create a new box if they feel like they have some delicious food left at the end of the day.
-
-<img align="center" alt="delifood.com" src="/demo/NewBox.png" />
-
-#### Restaurant can also view any active, picked up or expired orders once a hungry user reserves a box. An email is also sent to the restaurant notifying of a new order, which contains all the usefull info. 
-
-<img align="center" alt="delifood.com" src="/demo/RestOrders.png" />
-
-#### Once the customer paid and took a mystery box home, the order can be market as picked up and the rest is history.
-
-
-### Future of DeliFood
-We want keep expanding our project and leave a bigger impact in the fight against food waste and here are our plans:
 <br/>
 
-- [X] Add integrated check out
-- [X] Add more businesses to our platform, such as grocery stores 
-- [X] Add more customer support with WebSockets
+#### Of course, there is a search engine featured that let's you find any watcha by name so you can add it to your list
 
-#### Thank you for exploring DeliFood!
+![Search](demo/search.gif)
+<br/>
+![Search Result](demo/searchResult.gif)
 
-[git]: https://github.com/anakhom/DeliFood
+<br/>
+<br/>
+
+### Future of WATCHA
+WATCHA is just at the beginning of the journey. Initially written on handelbars, WATCHA's obvious future is React.js. But from there, we have some plans too:
+<br/>
+
+- [X] Add option to follow friends and other users
+- [X] Live feed displaying your friends' watchas 
+- [X] Add chat options with WebSockets
+- [X] More options for search engine, such as filters and recommendations 
+
+#### Thank you for exploring WATCHA! -->
+
+[git]: https://github.com/anakhom/watcha
 
