@@ -58,10 +58,11 @@ This app is for everyone who can't decide what to watch for way to long. Track a
 
 ![Search](demo/search.gif)
 <br/>
+<br/>
 ![Search Result](demo/searchResult.gif)
 
 <br/>
-<br/>
+
 
 ### Future of WATCHA
 WATCHA is just at the beginning of the journey. Initially written on handelbars, WATCHA's obvious future is React.js. But from there, we have some plans too:
@@ -72,7 +73,7 @@ WATCHA is just at the beginning of the journey. Initially written on handelbars,
 - [X] Add chat options with WebSockets
 - [X] More options for search engine, such as filters and recommendations 
 
-#### Thank you for exploring WATCHA! -->
+#### Thank you for exploring WATCHA!
 
 [git]: https://github.com/anakhom/watcha
 
