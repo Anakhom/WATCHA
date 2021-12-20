@@ -23,26 +23,25 @@ This app is for everyone who can't decide what to watch for way to long. Track a
 
 - Frontend: Soon: React, Redux(Thunk), SCSS
 - Backend: Node.js, Express, MongoDB, Mongoose, Bcrypt, Multer, NodeMailer
+- API: Movie Database API, IMDb API
 
 ## Let's explore WATCHA
 
-<!-- #### Welcome to the boxes page. DeliFood automatically gets user's location (with permission, of course) and displays all unfiltered boxes near the user.
-#### All boxes can be fileterd by cuisine, price, distance, or name.
+#### Although users can search watchas without being registered, they can only track them once thye are logged in.
 
-![Boxes Filter](demo/boxes.gif)
+![Login](demo/login.gif)
 
-#### The user can, of course, change their current location at any time.
-<img align="center" alt="delifood.com" src="/demo/location.png" />
+#### Welcome to user's shelf! All watched and wanted watchas are stored right here.
 
-## Let's Talk Boxes
+![Profile](demo/profile.gif)
 
-#### Boxes have all the essential info, which is set by the restaurant when adding a new box. User can see the distance, the pick-up time, the price, and the amount of similar boxes they can purchase.
+#### If no wathca comes to mind on a friday night, we got you. Top 30 Watchas page shows world's current hottest and most popular watchas and the list constantly updates. You can add any watcha to watched or wanted right here.
 
-<img align="center" alt="delifood.com" src="/demo/detailBoxes.png" />
+![Top 30](demo/top30.gif)
 
-#### User can view more detailed info about any given box, but they won't be able to reserve the box until they sign up. 
+#### There is a page for any watcha out there with more detailed info, of course.
 
-<img align="center" alt="delifood.com" src="/demo/boxModal.png" />
+![Single Watcha](demo/singleWatcha.gif)
 
 #### Of course, all boxes can be shown right on the map as well. 
 
@@ -96,4 +95,4 @@ We want keep expanding our project and leave a bigger impact in the fight agains
 #### Thank you for exploring DeliFood!
 
 [git]: https://github.com/anakhom/DeliFood
- -->
+
