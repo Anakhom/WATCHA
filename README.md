@@ -41,7 +41,7 @@ This app is for everyone who can't decide what to watch for way to long. Track a
 <br/>
 
 
-#### If no wathca comes to mind on a friday night, we got you. Top 30 Watchas page shows world's current hottest and most popular watchas and the list constantly updates. You can add any watcha to watched or wanted right here.
+#### If no watcha comes to mind on a Friday night, we got you. Top 30 Watchas page shows world's current hottest and most popular watchas and the list constantly updates. You can add any watcha to watched or wanted right here.
 
 ![Top 30](demo/top30.gif)
 
