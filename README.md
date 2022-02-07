@@ -21,7 +21,7 @@ This app is for everyone who can't decide what to watch for way to long. Track a
 <br/>
 <br/>
 
-- Frontend: Soon: React, Redux(Thunk), SCSS
+- Frontend: Soon: React, Redux(Thunk), anime.js, Letterize.js, SCSS
 - Backend: Node.js, Express, MongoDB, Mongoose, Bcrypt, Multer, NodeMailer
 - API: Movie Database API, IMDb API
 
